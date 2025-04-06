@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather and Safety Advice</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light gray background for a clean look */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .card {
+            border: none; /* Remove border for a minimalist look */
+            border-radius: 20px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+        .alert-info {
+            background-color: #e7f3ff; /* Light blue background for advice */
+            border: none;
+            border-radius: 10px;
+            color: #0056b3; /* Dark blue text */
+        }
+        .btn-secondary {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card mx-auto p-4" style="max-width: 600px;">
+            <div class="card-body">
+                <h1 class="card-title text-center mb-4" style="font-weight: 600;">Weather and Safety Advice</h1>
+                <p class="text-center text-muted">Here is the weather and safety advice for <strong>{{ location }}</strong>:</p>
+                <div class="alert alert-info mt-4" role="alert">
+                    {{ advice }}
+                </div>
+                <div class="d-grid mt-4">
+                    <a href="/" class="btn btn-secondary">Go Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
